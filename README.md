@@ -6,8 +6,8 @@ Angular Book Library
 * System Requirements:
    Angular CLI: 11.0.7
    Angular: 11.0.9
-   Node: v18.15.0
-   Npm: v9.5.0
+   Node: v16.16.0
+   Npm: v8.11.0
 
 * Installation:
    - clone project from `https://github.com/astroame/ng_book_library.git`

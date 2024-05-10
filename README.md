@@ -4,10 +4,10 @@ Angular Book Library
 
 ## PROJECTION DOCUMENTATION - 10-05-2024
 * System Requirements:
-   Angular CLI: 11.0.7
-   Angular: 11.0.9
-   Node: v16.16.0
-   Npm: v8.11.0
+   Angular CLI: 16.2.14
+   Angular: 16.2.12
+   Node: v20.13.1
+   Npm: v10.5.2
 
 * Installation:
    - clone project from `https://github.com/astroame/ng_book_library.git`
@@ -16,5 +16,8 @@ Angular Book Library
    - run `ng serve` for a dev server. Navigate to `http://localhost:4200/`
 
 * Tailwindcss setup:
-   - run `npm install -D tailwindcss postcss autoprefixer@9.8.6` 
+   - run `npm install -D tailwindcss postcss autoprefixer` 
    - run `npx tailwindcss init`
+
+
+* Using local angular cli. Prefix all `ng` commands with `npx` e.g `npx ng serve`

@@ -2,12 +2,12 @@
 Angular Book Library
 
 
-## PROJECTION DOCUMENTATION - 10-05-2024
+## PROJECT SETUP GUIDE - 10-05-2024
 * System Requirements:
-   Angular CLI: 16.2.14
-   Angular: 16.2.12
-   Node: v20.13.1
-   Npm: v10.5.2
+  - Angular CLI: 16.2.14
+  - Angular: 16.2.12
+  - Node: v20.13.1
+  - Npm: v10.5.2
 
 * Installation:
    - clone project from `https://github.com/astroame/ng_book_library.git`

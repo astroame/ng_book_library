@@ -1,20 +1,35 @@
 <div class="bg-white p-4 shadow-md rounded-lg flex flex-col md:relative">
-    <div class="md:flex">
-      <a routerLink="/" class="cursor-pointer">
-        <img [src]="book.cover_id | coverUrl" alt="{{ book.title }}" class="md:h-48 md:w-32 sm:w-full sm:h-auto" />
-      </a>
-    
-      <div class="flex flex-col justify-between p-4">
-        <div>
-          <p class="text-gray-600 text-xs"><strong>Publish:</strong> {{ book.first_publish_year }}</p>
-          <h3 class="text-md"><strong>Title:</strong> <a routerLink="/" class="cursor-pointer"><span class="font-medium"> {{ book.title }}</span></a></h3>
-          <p class="text-gray-700 text-sm"><strong>Author(s):</strong> {{ book.authors | authorName }}</p>
-        </div>
+  <div class="md:flex">
+    <a [routerLink]="['/book', book.key, book.title]">
+      <img
+        [src]="book.cover_id | coverUrl"
+        alt="{{ book.title }}"
+        class="md:h-48 md:w-32 sm:w-full sm:h-auto"
+      />
+    </a>
+
+    <div class="flex flex-col justify-between p-4">
+      <div>
+        <p class="text-gray-600 text-xs">
+          <strong>Publish:</strong> {{ book.first_publish_year }}
+        </p>
+        <h3 class="text-md">
+          <strong>Title:</strong>
+          <a [routerLink]="['/book', book.key, book.title]" class="cursor-pointer"
+            ><span class="font-medium"> {{ book.title }}</span></a
+          >
+        </h3>
+        <p class="text-gray-700 text-sm">
+          <strong>Author(s):</strong> {{ book.authors | authorName }}
+        </p>
       </div>
     </div>
-
-    <div class="md:absolute bottom-0 right-0 mb-4 mr-4">
-      <a routerLink="/" class="text-blue-700 mr-2 cursor-pointer">more</a> |
-      <button (click)="addToWishlist(book)" class="text-blue-700">wishlist</button>
-    </div>
   </div>
+
+  <div class="md:absolute bottom-0 right-0 mb-4 mr-4">
+    <a [routerLink]="['/book', book.key, book.title]" class="text-blue-700 mr-2">more</a> |
+    <button (click)="addToWishlist(book)" class="text-blue-700">
+      wishlist
+    </button>
+  </div>
+</div>

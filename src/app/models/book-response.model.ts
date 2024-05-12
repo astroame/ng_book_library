@@ -9,5 +9,6 @@ export interface BookResponseModel {
     subject_type?: string;
     work_count?: number;
     works?: BookModel[];
+    docs?: BookModel[];
   }
   

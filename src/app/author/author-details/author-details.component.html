@@ -1,0 +1,42 @@
+<div class="container mx-auto p-4" style="width: 70%">
+  <div class="bg-white p-4 shadow-md rounded-lg" *ngIf="author">
+    <h1 class="text-xl font-bold mb-4">{{ author.name }}</h1>
+
+    <div class="grid grid-cols-1 gap-4">
+      <div class="bg-white p-4 rounded-lg flex flex-col">
+        <div class="md:flex items-center">
+          <img
+            [src]="author.key | coverUrl : 'a'"
+            alt="{{ author.name }}"
+            class="md:h-48 md:w-32 sm:w-full sm:h-auto"
+          />
+
+          <div class="flex flex-col justify-between p-4 md:ml-8">
+            <div>
+              <p class="text-gray-600 text-xs">
+                <strong>Birth Date:</strong> {{ author.birth_date }}
+              </p>
+              <p class="text-gray-600 text-xs">
+                <strong>Top Work:</strong> {{ author.top_work }}
+              </p>
+
+              <p class="text-gray-600 text-xs mt-3">
+                <strong>Top Sujects:</strong>
+                <!-- {{ author.top_subjects }} -->
+                <ng-container *ngIf="author.top_subjects">
+                  <div class="flex flex-wrap gap-2">
+                    <span
+                      *ngFor="let subject of author.top_subjects.slice(0, 5)"
+                      class="bg-gray-200 text-gray-700 px-2 py-1 rounded-full text-xs"
+                      >{{ subject }}</span
+                    >
+                  </div>
+                </ng-container>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

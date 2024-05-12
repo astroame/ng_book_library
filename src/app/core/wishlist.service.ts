@@ -45,4 +45,8 @@ export class WishlistService {
   getWishlistCount(): Observable<number> {
     return this.store.select(state => state.wishlist.books.length);
   }
+
+  getWishlistBooks(): Observable<BookModel[]> {
+    return this.store.select(state => state.wishlist.books);
+  }
 }

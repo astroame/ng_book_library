@@ -15,11 +15,18 @@ const routes: Routes = [
   },
   {
     path: "author",
-    loadChildren: () => import("./author/author.module").then((m) => m.AuthorModule),
+    loadChildren: () =>
+      import("./author/author.module").then((m) => m.AuthorModule),
   },
   {
     path: "search",
-    loadChildren: () => import("./search/search.module").then((m) => m.SearchModule),
+    loadChildren: () =>
+      import("./search/search.module").then((m) => m.SearchModule),
+  },
+  {
+    path: "wishlist",
+    loadChildren: () =>
+      import("./wishlist/wishlist.module").then((m) => m.WishlistModule),
   },
 ];
 

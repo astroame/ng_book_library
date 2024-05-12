@@ -6,6 +6,7 @@ Angular Book Library
 * System Requirements:
   - Angular CLI: 16.2.14
   - Angular: 16.2.12
+  - Ngrx/store: 16.3.0
   - Node: v20.13.1
   - Npm: v10.5.2
 

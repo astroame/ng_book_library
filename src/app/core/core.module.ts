@@ -12,7 +12,7 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     HttpClientModule,
-    RouterModule,
+    RouterModule
   ],
   exports: [HttpClientModule, RouterModule]
 })

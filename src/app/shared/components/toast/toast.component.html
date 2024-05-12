@@ -1,0 +1,35 @@
+<div
+  id="toast-wrapper"
+  class="fixed bottom-0 right-0 p-6"
+  *ngFor="let toast of toastService.toasts"
+>
+  <div
+    class="flex items-center p-4 mb-4 text-sm text-white bg-gray-700 border-l-4 border-gray-800 rounded shadow-md"
+    role="alert"
+  >
+    <span>{{ toast.text }}</span>
+    <button
+      type="button"
+      class="ml-auto -mx-1.5 -my-1.5 bg-transparent text-white rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5 hover:bg-gray-500"
+      (click)="toastService.remove(toast)"
+    >
+      <span class="sr-only">Close</span>
+      <svg
+        class="w-4 h-4"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M6 18L18 6M6 6l12 12"
+        ></path>
+      </svg>
+    </button>
+  </div>
+</div>
+
+

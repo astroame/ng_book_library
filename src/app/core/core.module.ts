@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 
 /**
@@ -12,8 +13,9 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
-  exports: [HttpClientModule, RouterModule]
+  exports: [HttpClientModule, RouterModule,FormsModule]
 })
 export class CoreModule { }
